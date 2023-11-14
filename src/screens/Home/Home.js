@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import background1 from '../../assets/Images/background1.png';
 import DraggableModal from '../../components/DraggableModal/DraggableModal';
 
@@ -63,17 +64,27 @@ const Home = () => {
       </BottomSheet> */}
 
       <View style={styles.componentContainer}>
-        <Image style={styles.background} source={background1} alt="" />
-        <View style={styles.imgContent}>
-          <View style={styles.imgTopContent}>
-            <Text style={styles.imgText}>UNDER OR OVER</Text>
-            <Text>Starting in 24/02/03</Text>
-          </View>
-          <View style={styles.imgTopContent2}>
-            <Text>Bitcoin price will be under</Text>
-            <Text style={styles.bitcoinText}>
-              $24,524 at 7 a ET on 22nd Jan’21
-            </Text>
+        <View style={styles.componentImgContainer}>
+          <Image style={styles.background} source={background1} alt="" />
+          <View style={styles.imgContent}>
+            <View style={styles.imgTopContent}>
+              <Text style={styles.imgText}>UNDER OR OVER</Text>
+              <Text style={styles.imgText}>
+                Starting in{' '}
+                <AntDesign
+                  name="clockcircle"
+                  color={styles.imgText}
+                  size={14}
+                />{' '}
+                24.02.03
+              </Text>
+            </View>
+            <View style={styles.imgTopContent2}>
+              <Text style={styles.imgText}>Bitcoin price will be under</Text>
+              <Text style={styles.bitcoinText}>
+                $24,524 at 7 a ET on 22nd Jan’21
+              </Text>
+            </View>
           </View>
         </View>
 
@@ -199,12 +210,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     margin: 20,
   },
+  componentImgContainer: {
+    width: '100%',
+  },
   componentContainer: {
     display: 'flex',
     position: 'relative',
     width: '90%',
     alignSelf: 'center',
-    // elevation: 1,
     borderRadius: 10,
     borderWidth: 0.4,
   },
@@ -215,17 +228,18 @@ const styles = StyleSheet.create({
   },
   imgContent: {
     position: 'absolute',
-    top: '5%',
-    left: '5%',
+    top: '16%',
+    paddingHorizontal: 10,
+    width: '100%',
   },
   imgTopContent: {
     display: 'flex',
     flexDirection: 'row',
+    width: '100%',
     justifyContent: 'space-between',
-    width: '82%',
   },
   imgText: {
-    // color: 'white',
+    color: 'lightgray',
   },
   imgTopContent2: {
     marginTop: 20,
@@ -237,6 +251,7 @@ const styles = StyleSheet.create({
   },
   table: {
     marginTop: 15,
+    paddingHorizontal: 10,
   },
   tableRow: {
     flexDirection: 'row',
@@ -253,6 +268,7 @@ const styles = StyleSheet.create({
   },
   tableHeader: {
     color: 'grey',
+    fontSize: 14,
   },
   cell: {
     flex: 1,
@@ -262,27 +278,27 @@ const styles = StyleSheet.create({
   tableData: {
     color: 'black',
     fontWeight: '600',
-    fontSize: 15.5,
+    fontSize: 15,
   },
   middleComponent: {},
   textComponent: {
     color: 'gray',
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 'bold',
     padding: 10,
   },
   underBtn: {
     backgroundColor: '#452C55',
-    width: 150,
-    height: 40,
+    width: 120,
+    height: 35,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },
   overBtn: {
     backgroundColor: '#6231AD',
-    width: 150,
-    height: 40,
+    width: 120,
+    height: 35,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -337,7 +353,7 @@ const styles = StyleSheet.create({
   lowerLowerContainer: {},
   lowerContentText: {
     color: 'gray',
-    fontSize: 15,
+    fontSize: 13,
     marginTop: 10,
   },
 });

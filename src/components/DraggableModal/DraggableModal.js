@@ -3,7 +3,6 @@
 import React, {useRef, useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import Modal from 'react-native-modal';
-// import {Picker} from '@react-native-picker/picker';
 import ScrollPicker from 'react-native-picker-scrollview';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -18,13 +17,9 @@ const DraggableModal = ({
   const spRef = useRef(null);
 
   return (
-    <Modal
-      isVisible={isVisible}
-      // swipeDirection={['down']}
-      // onSwipeComplete={onClose}
-      style={styles.modal}
-      onBackdropPress={onClose}>
+    <Modal isVisible={isVisible} style={styles.modal} onBackdropPress={onClose}>
       <View style={styles.modalContent}>
+        <View style={styles.dragIcon}></View>
         <Text style={styles.title}>Your prediction is {prediction}</Text>
         <Text style={styles.ticketText}>Entry Tickets</Text>
         <ScrollPicker
@@ -76,6 +71,13 @@ const styles = StyleSheet.create({
   modal: {
     justifyContent: 'flex-end',
     margin: 0,
+  },
+  dragIcon: {
+    width: 50,
+    height: 6,
+    backgroundColor: 'gray',
+    borderRadius: 20,
+    alignSelf: 'center',
   },
   modalContent: {
     backgroundColor: 'white',

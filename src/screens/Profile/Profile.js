@@ -43,7 +43,7 @@ const Profile = () => {
         </Text>
         <TouchableOpacity style={styles.logoutBtn}>
           <MaterialCommunityIcons name="logout" size={23} color="gray" />
-          <Text style={{color: 'gray', fontSize: 18, letterSpacing: 1}}>
+          <Text style={{color: 'gray', fontSize: 15, letterSpacing: 1}}>
             Logout
           </Text>
         </TouchableOpacity>
@@ -62,7 +62,7 @@ const Profile = () => {
           </Text>
           <View style={styles.scoreContent}>
             <View style={styles.upIcon}>
-              <AntDesign name="arrowup" size={25} color="green" />
+              <AntDesign name="arrowup" size={22} color="green" />
             </View>
             <Text style={styles.score}>81%</Text>
           </View>
@@ -79,7 +79,7 @@ const Profile = () => {
           </Text>
           <View style={styles.scoreContent}>
             <View style={styles.downIcon}>
-              <AntDesign name="arrowdown" size={25} color="red" />
+              <AntDesign name="arrowdown" size={22} color="red" />
             </View>
             <Text style={styles.score}>-51%</Text>
           </View>
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
   userDesc: {
     color: 'gray',
     padding: 15,
-    fontSize: 15,
+    fontSize: 14,
     letterSpacing: 0.5,
   },
   logoutBtn: {
@@ -210,11 +210,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     paddingHorizontal: 40,
     borderRadius: 5,
-    marginTop: 35,
+    marginTop: 25,
     position: 'relative',
   },
   score: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     color: 'gray',
     marginLeft: 10,
